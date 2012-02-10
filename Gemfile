@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -26,8 +27,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'bcrypt-ruby', '3.0.1'
+#gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -42,4 +42,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '1.4.0'
 end
