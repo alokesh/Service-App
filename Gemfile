@@ -8,6 +8,7 @@ gem 'rails', '3.1.3'
 group :development do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.8.1'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 group :production do
@@ -26,6 +27,7 @@ gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Use unicorn as the web server
 # gem 'unicorn'

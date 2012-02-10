@@ -23,7 +23,10 @@ body.about #header {
 	height: 150px;
 	background: #cff;	
 	background-repeat:repeat-y;
-	vertical-align: middle;
+	vertical-align: bottom;
+}
+#header .padding {
+	padding: 25px;
 }
 #sidebar {
 	float: left;
