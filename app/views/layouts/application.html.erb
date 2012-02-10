@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IService</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= render 'layouts/stylesheets' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="container" class="round">
+		<%= render 'layouts/header' %>
+		<%= render 'layouts/sidebar' %>
+		
+		<div id="content">
+			<%= yield %>
+		</div>
+		<%= render 'layouts/footer' %>
+	</div>
 </body>
 </html>
