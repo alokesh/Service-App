@@ -7,6 +7,7 @@ gem 'rails', '3.1.3'
 
 group :development do
   gem 'sqlite3', '1.3.5'
+  gem 'rspec-rails', '2.8.1'
 end
 
 group :production do
@@ -38,4 +39,5 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+  gem 'capybara', '1.1.2'
 end
