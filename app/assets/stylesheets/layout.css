@@ -1,0 +1,154 @@
+#container{
+	width: 760px;
+	margin: auto;
+	text-align: left;
+	background: #ffc;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Arial, Helvetica, Verdana, Sans-serif;
+	font-size: 14px;
+	color: #666666;
+	text-align: center;
+}
+body.about #header {
+	height: 150px;
+	background: #db6d16
+				url(../images/about.gif);
+}
+#header {
+	height: 150px;
+	background: #cff;	
+	background-repeat:repeat-y;
+	vertical-align: middle;
+}
+#sidebar {
+	float: left;
+	width: 280px;
+	line-height: 18px;
+}
+
+#sidebar .padding {
+	padding: 25px;
+}
+#content {
+	margin-left: 280px;
+	line-height: 18px;
+}
+
+#content .padding {
+	padding: 25px;
+}
+h1 {
+	margin: 0;
+	padding: 0;
+	float: right;
+	margin-top: 57px;
+	padding-right: 31px;
+}
+#content h2 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
+
+#content p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
+#footer {
+	clear: both;
+	font-family: Tahoma, Arial, Helvetica, Sans-serif;
+	font-size: 12px;
+	color: #c9c9c9;
+	border-top: 1px solid #efefef;
+	padding: 13px 25px;
+	line-height: 18px;
+	background: #db6d16
+}
+#footer a {
+	color: green;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: red;
+}
+#footer #altnav {
+	clear: both;
+	width: 350px;
+	float: right;
+	text-align: right;
+	padding-top: 13px;
+}
+#footer #copyright {
+	padding-top: 13px;
+}
+body.about dt#about,
+body.about dt#about a,
+body.about dt#about a:hover,
+body.services dt#services,
+body.services dt#services a,
+body.services dt#services a:hover,
+body.portfolio dt#portfolio,
+body.portfolio dt#portfolio a,
+body.portfolio dt#portfolio a:hover,
+body.contact dt#contact,
+body.contact dt#contact a,
+body.contact dt#contact a:hover {
+	background-position: 0 -100px;
+}
+/* Navigation */
+
+nav {
+  float: right;
+  background-color: #ffc;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+/* Sign up button */
+
+a.signup_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #ffc;
+  background: #006400;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
