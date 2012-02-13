@@ -3,6 +3,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.2'
+
 gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'twitter_bootstrap_form_for', :git => 'https://github.com/stouset/twitter_bootstrap_form_for.git'
 # Bundle edge Rails instead:

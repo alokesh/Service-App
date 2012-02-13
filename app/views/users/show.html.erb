@@ -1,16 +1,9 @@
 <% provide :title, @user.name %>
-<p>Profile</p>
-<table class="profile">
-  <tr>
-    <td class="main">
-      <h2>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h2>
-    </td>
-    <td class="profilebar round">
-      <strong>Name</strong> <%= @user.name %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
-    </td>
-  </tr>
-</table>
+<div class="span3">
+	<%= gravatar_for @user %>
+</div>
+<div class="span3">
+	<strong>Name</strong> <%= @user.name %><br />
+	<strong>Email</strong>  <%= @user.email %><br />
+	<strong>Born On</strong>  <%= @user.born_on %><br />
+</div>
