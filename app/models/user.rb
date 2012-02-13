@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
   
+  self.per_page = 10
+  
   private
 
     def create_remember_token

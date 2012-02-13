@@ -1,7 +1,13 @@
-<li>
-  <%= gravatar_for user, size: 30 %>
-  <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete, confirm: "You sure?" %>
-  <% end %>
-</li>
+<tr>
+	<padding>
+	  <td class="span1"><%= gravatar_for user, size: 30 %></td>
+	  <td class="span2"><%= link_to user.name, user %></td>
+	  <td class="span2"><%= user.email %></td>
+	  <td class="span1"><%= user.born_on %></td>
+	  <td class="span2">
+	  <% if current_user.admin? && !current_user?(user) %>
+		| <%= link_to "delete", user, method: :delete, confirm: "You sure?" %>
+	  <% end %>
+	  </td>
+	 </padding>
+</tr>
