@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title><%= full_title(yield(:title)) %></title>
-  <%= render 'layouts/stylesheets' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div id="container" class="round">
-		<%= render 'layouts/header' %>
-		<%= render 'layouts/sidebar' %>
-		
-		<div id="content">
-			<% flash.each do |key, value| %>
-          		<div class="flash <%= key %>"><%= value %></div>
-        	<% end %>
-			<%= yield %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+	<%= render 'layouts/stylesheets' %>
+	<%= render 'layouts/images' %>
+  </head>
+  <body>
+	<%= render 'layouts/navbar' %>
+    <div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<%= render 'layouts/header' %>
+			</div>
 		</div>
-		<%= render 'layouts/footer' %>
+	    <div class="row-fluid">
+			<div class="span3">
+				<%= render 'layouts/sidebar' %>
+			</div><!--/span-->
+			<div class="span9">
+				<% flash.each do |key, value| %>
+          			<div class="flash <%= key %>"><%= value %></div>
+        		<% end %>
+				<%= yield %>
+			</div>
+		</div><!--/row-->
+		<div class="row-fluid">
+			<div class="span12">
+				<%= render 'layouts/footer' %>
+			</div>
+		</div>
 		<%= debug(params) if Rails.env.development? %>
-	</div>
-</body>
+    </div> <!-- /container -->
+	<%= render 'layouts/javascripts' %>
+  </body>
 </html>

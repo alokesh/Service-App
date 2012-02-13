@@ -1,25 +1,19 @@
 <% provide(:title, 'Sign up') %>
-<p>Sign up</p>
+<%= twitter_bootstrap_form_for(@user) do |f| %>
+	<%= render 'shared/error_messages' %>
+	<%= f.text_field :name %>
+	<%= f.email_field :email, :placeholder => 'me@example.com'%>
+	<%= f.date_select :born_on, 'Born on', {:start_year => 1950}, :class => 'small' %>
 
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+    <%= f.password_field :password do %>
+    <span class=help-block>
+        <br/>Must be no larger than 6 characters
+        <br/>Must contain only the letters 'x' or 'p'
+    </span>
+	<% end %>
+	<%= f.password_field :password_confirmation, 'Confirm Password'%>
+	<%= f.actions do%>
+	    <%= f.submit 'Sign up'%>
+	    <%= button_tag  'Reset	', :type => 'reset', :class => 'btn'%>
+	<% end %>
 <% end %>
